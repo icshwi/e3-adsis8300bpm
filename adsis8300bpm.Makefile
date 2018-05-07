@@ -49,10 +49,12 @@ HEADERS += $(APPSRC)/bpm.h
 SOURCES += $(APPSRC)/bpm.cpp
 DBDS    += $(APPSRC)/bpmSupport.dbd
 
+TEMPLATES += $(wildcard $(APPDB)/*.db)
+
 
 DRV:=vendor/ess/lib
 
-USR_INCLUDES += -I$(where_am_I)$(DRV)
+#USR_INCLUDES += -I$(where_am_I)$(DRV)
 
 HEADERS += $(DRV)/sis8300drvbpm.h
 HEADERS += $(DRV)/sis8300bpm_reg.h
