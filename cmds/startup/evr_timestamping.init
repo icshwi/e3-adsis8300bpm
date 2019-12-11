@@ -1,0 +1,29 @@
+## start timestamping configuration
+
+# acquisition results
+# dbpf $(SYSTEM):AMC31-AOI11-ArrayCounter_RBV.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):AMC31-AOI11-ArrayData.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):AMC31-AOI11-MaxValueR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):AMC31-AOI11-MeanValueR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):AMC31-AOI11-MinValueR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):AMC31-AOI11-SizeR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):AMC31-AOI11-StartR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):AMC31-AOI11-TSMaxValue.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):AMC31-AOI11-TSMeanValue.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):AMC31-AOI11-TSMinValue.TSEL $(EVR_PREFIX)Time-I.TIME
+
+
+# bias status
+# dbpf $(SYSTEM):HV06-BiasR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):HV06-CurrR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):HV06-VoltR.TSEL $(EVR_PREFIX)Time-I.TIME
+
+
+# motion, limit switches
+# dbpf $(SYSTEM):MCU08-InsertedR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):MCU08-LimitInR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):MCU08-LimitOutR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):MCU08-MovePermitR.TSEL $(EVR_PREFIX)Time-I.TIME
+# dbpf $(SYSTEM):MCU08-WaterFlowR.TSEL $(EVR_PREFIX)Time-I.TIME
+
+## end timestamping configuration

@@ -1,0 +1,45 @@
+# sis8300
+file "sis8300_settings.req",             P=$(P),  R=
+file "sis8300SigGen_settings.req",       P=$(P),  R=
+file "acq_channel_settings.req",         P=$(P),  N=I1-A
+file "acq_channel_settings.req",         P=$(P),  N=I1-B
+file "acq_channel_settings.req",         P=$(P),  N=I1-C
+file "acq_channel_settings.req",         P=$(P),  N=I1-D
+file "acq_channel_settings.req",         P=$(P),  N=RF
+file "acq_channel_settings.req",         P=$(P),  N=I2-A
+file "acq_channel_settings.req",         P=$(P),  N=I2-B
+file "acq_channel_settings.req",         P=$(P),  N=I2-C
+file "acq_channel_settings.req",         P=$(P),  N=I2-D
+
+# BPM
+file "sis8300bpm_settings.req",          P=$(P),  R=
+file "sis8300bpmI_settings.req",         P=$(P),  R=I1-
+file "sis8300bpmI_settings.req",         P=$(P),  R=I2-
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-AM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-BM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-CM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-DM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-AA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-BA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-CA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-DA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-SM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-SA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-XP
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I1-YP
+
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-AM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-BM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-CM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-DM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-AA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-BA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-CA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-DA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-SM
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-SA
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-XP
+file "acq_bpm_channel_settings.req",     P=$(P),  N=I2-YP
+
+file "acq_bpm_channel_settings.req",     P=$(P),  N=RF-M
+file "acq_bpm_channel_settings.req",     P=$(P),  N=RF-A

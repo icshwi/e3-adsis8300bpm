@@ -1,0 +1,9 @@
+## start autosave configuration
+
+# save things every thirty seconds
+create_monitor_set("acq_settings.req", 30, "P=$(ACQ_PREFIX)")
+
+# save things every thirty seconds
+# create_monitor_set("evr_settings.req", 30, "P=$(EVR_PREFIX)")
+
+## end autosave configuration

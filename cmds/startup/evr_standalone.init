@@ -1,0 +1,5 @@
+## start EVR standalone mode configuration
+
+iocshLoad("$(mrfioc2_DIR)/evr-standalone-mode.iocsh", "S=$(EVR_S), DEV=$(EVR_D)")
+
+## end EVR standalone mode configuration

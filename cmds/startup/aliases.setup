@@ -1,0 +1,5 @@
+
+# PV aliases for MEBT BPM 001
+dbLoadRecords("bpm_aliases.template",  "ACQ=$(ACQ_PREFIX),EVR=$(EVR_PREFIX),EM=$(EM_PREFIX),I=I1, SYSTEM=$(SYSTEM1):")
+# PV aliases for MEBT BPM 002
+dbLoadRecords("bpm_aliases.template",  "ACQ=$(ACQ_PREFIX),EVR=$(EVR_PREFIX),EM=$(EM_PREFIX),I=I2, SYSTEM=$(SYSTEM2):")

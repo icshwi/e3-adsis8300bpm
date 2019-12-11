@@ -1,0 +1,24 @@
+# channel controls
+file "sis8300bpmN_settings.req",     P=$(P),  R=$(N)-
+
+# common chain
+file "NDProcess_settings.req",       P=$(P),  R=$(N)-PR1-
+file "NDFileTIFF_settings.req",      P=$(P),  R=$(N)-PR1-TF-
+
+# pulse chain
+file "sis8300ROI_settings.req",      P=$(P),  R=$(N)-RI2-
+file "NDProcess_settings.req",       P=$(P),  R=$(N)-PR2-
+file "NDStdArrays_settings.req",     P=$(P),  R=$(N)-TR2-
+
+# flattop chain
+file "sis8300ROI_settings.req",      P=$(P),  R=$(N)-RI3-
+file "NDProcess_settings.req",       P=$(P),  R=$(N)-PR3-
+file "NDStdArrays_settings.req",     P=$(P),  R=$(N)-TR3-
+
+# ftstats chain
+file "NDStats_settings.req",         P=$(P),  R=$(N)-ST3-,  S=$(N)-ST3-TS-
+
+# debug chain
+file "NDStdArrays_settings.req",     P=$(P),  R=$(N)-TR1-
+file "NDCircularBuff_settings.req",  P=$(P),  R=$(N)-CB1-
+file "NDFileTIFF_settings.req",      P=$(P),  R=$(N)-TF1-

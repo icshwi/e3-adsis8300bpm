@@ -1,0 +1,18 @@
+## start acquisition configuration with FAKEDEV!
+
+# internal clock
+dbpf $(ACQ_PREFIX)ClockSource "Internal"
+dbpf $(ACQ_PREFIX)ClockDiv 25
+# software trigger line
+dbpf $(ACQ_PREFIX)TrigRepeat 0
+dbpf $(ACQ_PREFIX)TrigSource "Software"
+
+# internal generator
+dbpf $(ACQ_PREFIX)_GenWaitTime 72
+dbpf $(ACQ_PREFIX)_GenPulseDelay 100
+dbpf $(ACQ_PREFIX)_GenPulseHeight 30000
+dbpf $(ACQ_PREFIX)_GenPulseWidth 60000
+dbpf $(ACQ_PREFIX)_GenPulseOffset 0
+dbpf $(ACQ_PREFIX)_GenPulseNoise 300
+
+## end acquisition configuration with FAKEDEV!

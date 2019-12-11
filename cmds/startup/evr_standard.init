@@ -1,0 +1,43 @@
+## start standard EVR configuration
+
+# epicsEnvSet("EVR_S",                   "MEBT")
+# epicsEnvSet("EVR_D",                   "010:PBI-EVR-020")
+
+
+# bugfix for EVR loosing the timestamp for 5 seconds every 7-8 hours
+dbpf $(EVR_S)-$(EVR_D):DC-Tgt-SP 70
+
+## BPM PULSE START
+dbpf $(EVR_S)-$(EVR_D):DlyGen0-Evt-Trig0-SP $(EVENT_TRIGGER)
+# trigger pulse width in us resolution (see SoftSeq0-TsResolution-Sel)
+dbpf $(EVR_S)-$(EVR_D):DlyGen0-Width-SP $(PULSE_WIDTH)
+# trigger from delay generator 0
+dbpf $(EVR_S)-$(EVR_D):DlyGen0-Delay-SP $(PULSE_START)
+# backplane 1 line
+dbpf $(EVR_S)-$(EVR_D):OutBack1-Src-SP 0
+
+## BPM PULSE END
+dbpf $(EVR_S)-$(EVR_D):DlyGen1-Evt-Trig0-SP $(EVENT_TRIGGER)
+# trigger pulse width in us resolution (see SoftSeq0-TsResolution-Sel)
+dbpf $(EVR_S)-$(EVR_D):DlyGen1-Width-SP $(PULSE_WIDTH)
+# trigger from delay generator 0
+dbpf $(EVR_S)-$(EVR_D):DlyGen1-Delay-SP $(PULSE_END)
+# backplane 2 line
+dbpf $(EVR_S)-$(EVR_D):OutBack2-Src-SP 1
+
+# front panel trigger line X at 14 Hz
+#  backplane line X; X=0..3
+#  dbpf $(EVR_S)-$(EVR_D):OutFPX-Src-SP 0
+# front panel 0
+dbpf $(EVR_S)-$(EVR_D):OutFP0-Src-SP 0
+# front panel 1
+dbpf $(EVR_S)-$(EVR_D):OutFP1-Src-SP 1
+# front panel 2
+# dbpf $(EVR_S)-$(EVR_D):OutFP2-Src-SP 0
+# front panel 3
+# dbpf $(EVR_S)-$(EVR_D):OutFP3-Src-SP 0
+
+# enable the EVR
+dbpf $(EVR_S)-$(EVR_D):Ena-Sel "Enabled"
+
+## end standard EVR configuration

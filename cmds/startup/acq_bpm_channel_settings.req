@@ -1,0 +1,4 @@
+file "sis8300bpmN_settings.req",     P=$(P),  R=$(N)-
+file "NDTrace_settings.req",         P=$(P),  R=$(N)-TR1-
+file "NDAttribute_settings.req",     P=$(P),  R=$(N)-AT1-,  S=$(N)-AT1-TS1-
+file "NDAttributeN_settings.req",    P=$(P),  R=$(N)-AT1-1-

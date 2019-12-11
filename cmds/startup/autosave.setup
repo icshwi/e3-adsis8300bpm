@@ -1,0 +1,27 @@
+## start autosave setup
+
+set_requestfile_path("./")
+set_requestfile_path("$(ADSIS8300BPM)/req")
+set_requestfile_path("$(ADSIS8300)/req")
+set_requestfile_path("$(ADMISC)/req")
+set_requestfile_path("$(ADCORE)/req")
+set_requestfile_path("$(BUSY)/req")
+set_requestfile_path("$(SSCAN)/req")
+set_requestfile_path("$(CALC)/req")
+set_savefile_path("$(TOP)/autosave")
+
+set_pass0_restoreFile("acq_settings.sav")
+set_pass1_restoreFile("acq_settings.sav")
+
+# acquisition
+save_restoreSet_status_prefix("$(ACQ_PREFIX)")
+dbLoadRecords("save_restoreStatus.db", "P=$(ACQ_PREFIX)")
+
+# timing
+# TODO
+
+# TODO: it would be nice to have this at least for output records?
+#       OTOH, maybe it is better to have some defaults elsewhere; post iocInit()?
+# set_requestfile_path("$(ECAT2DB)/ecat2dbApp/Db")
+
+## end autosave setup

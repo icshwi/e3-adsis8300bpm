@@ -1,0 +1,71 @@
+## start acquisition configuration
+
+# setup acquisition parameters
+dbpf $(ACQ_PREFIX)NumSamples 300000
+dbpf $(ACQ_PREFIX)ClockSource 6
+# dbpf $(ACQ_PREFIX)ClockDiv 1
+dbpf $(ACQ_PREFIX)SamplingFreq 88052500
+dbpf $(ACQ_PREFIX)RTMType 4
+# enable all AI &  BPM channels
+dbpf $(ACQ_PREFIX)CHControlAll 1
+# read the temperature every 5 seconds
+dbpf $(EM_PREFIX)Temp1-Read.SCAN 4
+
+# average attribute name is the same for all channels
+dbpf $(ACQ_PREFIX)I1-XP-AT1-1-AttrName "BPMChannelAverage"
+# 1 / 8805025 MHz  == LAB-090Row:PBI-AMC-011:TickValueR
+dbpf $(ACQ_PREFIX)I1-XP-AT1-TS1-TSAveragingTime 1.1356860963629653E-8
+dbpf $(ACQ_PREFIX)I1-XP-AT1-TS1-TSAcquireMode "Circ. buffer"
+dbpf $(ACQ_PREFIX)I1-XP-AT1-TS1-TSNumPoints 4000
+dbpf $(ACQ_PREFIX)I1-XP-AT1-TS1-TSAcquire 1
+
+dbpf $(ACQ_PREFIX)I1-YP-AT1-1-AttrName "BPMChannelAverage"
+# 1 / 8805025 MHz  == LAB-090Row:PBI-AMC-011:TickValueR
+dbpf $(ACQ_PREFIX)I1-YP-AT1-TS1-TSAveragingTime 1.1356860963629653E-8
+dbpf $(ACQ_PREFIX)I1-YP-AT1-TS1-TSAcquireMode "Circ. buffer"
+dbpf $(ACQ_PREFIX)I1-YP-AT1-TS1-TSNumPoints 4000
+dbpf $(ACQ_PREFIX)I1-YP-AT1-TS1-TSAcquire 1
+
+dbpf $(ACQ_PREFIX)I1-SM-AT1-1-AttrName "BPMChannelAverage"
+# 1 / 8805025 MHz  == LAB-090Row:PBI-AMC-011:TickValueR
+dbpf $(ACQ_PREFIX)I1-SM-AT1-TS1-TSAveragingTime 1.1356860963629653E-8
+dbpf $(ACQ_PREFIX)I1-SM-AT1-TS1-TSAcquireMode "Circ. buffer"
+dbpf $(ACQ_PREFIX)I1-SM-AT1-TS1-TSNumPoints 4000
+dbpf $(ACQ_PREFIX)I1-SM-AT1-TS1-TSAcquire 1
+
+dbpf $(ACQ_PREFIX)I1-SA-AT1-1-AttrName "BPMChannelAverage"
+# 1 / 8805025 MHz  == LAB-090Row:PBI-AMC-011:TickValueR
+dbpf $(ACQ_PREFIX)I1-SA-AT1-TS1-TSAveragingTime 1.1356860963629653E-8
+dbpf $(ACQ_PREFIX)I1-SA-AT1-TS1-TSAcquireMode "Circ. buffer"
+dbpf $(ACQ_PREFIX)I1-SA-AT1-TS1-TSNumPoints 4000
+dbpf $(ACQ_PREFIX)I1-SA-AT1-TS1-TSAcquire 1
+
+dbpf $(ACQ_PREFIX)I2-XP-AT1-1-AttrName "BPMChannelAverage"
+# 1 / 8805025 MHz  == LAB-090Row:PBI-AMC-011:TickValueR
+dbpf $(ACQ_PREFIX)I2-XP-AT1-TS1-TSAveragingTime 1.1356860963629653E-8
+dbpf $(ACQ_PREFIX)I2-XP-AT1-TS1-TSAcquireMode "Circ. buffer"
+dbpf $(ACQ_PREFIX)I2-XP-AT1-TS1-TSNumPoints 4000
+dbpf $(ACQ_PREFIX)I2-XP-AT1-TS1-TSAcquire 1
+
+dbpf $(ACQ_PREFIX)I2-YP-AT1-1-AttrName "BPMChannelAverage"
+# 1 / 8805025 MHz  == LAB-090Row:PBI-AMC-011:TickValueR
+dbpf $(ACQ_PREFIX)I2-YP-AT1-TS1-TSAveragingTime 1.1356860963629653E-8
+dbpf $(ACQ_PREFIX)I2-YP-AT1-TS1-TSAcquireMode "Circ. buffer"
+dbpf $(ACQ_PREFIX)I2-YP-AT1-TS1-TSNumPoints 4000
+dbpf $(ACQ_PREFIX)I2-YP-AT1-TS1-TSAcquire 1
+
+dbpf $(ACQ_PREFIX)I2-SM-AT1-1-AttrName "BPMChannelAverage"
+# 1 / 8805025 MHz  == LAB-090Row:PBI-AMC-011:TickValueR
+dbpf $(ACQ_PREFIX)I2-SM-AT1-TS1-TSAveragingTime 1.1356860963629653E-8
+dbpf $(ACQ_PREFIX)I2-SM-AT1-TS1-TSAcquireMode "Circ. buffer"
+dbpf $(ACQ_PREFIX)I2-SM-AT1-TS1-TSNumPoints 4000
+dbpf $(ACQ_PREFIX)I2-SM-AT1-TS1-TSAcquire 1
+
+dbpf $(ACQ_PREFIX)I2-SA-AT1-1-AttrName "BPMChannelAverage"
+# 1 / 8805025 MHz  == LAB-090Row:PBI-AMC-011:TickValueR
+dbpf $(ACQ_PREFIX)I2-SA-AT1-TS1-TSAveragingTime 1.1356860963629653E-8
+dbpf $(ACQ_PREFIX)I2-SA-AT1-TS1-TSAcquireMode "Circ. buffer"
+dbpf $(ACQ_PREFIX)I2-SA-AT1-TS1-TSNumPoints 4000
+dbpf $(ACQ_PREFIX)I2-SA-AT1-TS1-TSAcquire 1
+
+## end acquisition configuration

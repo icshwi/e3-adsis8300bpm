@@ -1,0 +1,3 @@
+file "sis8300N_settings.req",        P=$(P),  R=$(N)-
+file "sis8300Next_settings.req",     P=$(P),  R=$(N)-
+file "NDTrace_settings.req",         P=$(P),  R=$(N)-TR1-

@@ -1,0 +1,9 @@
+
+epicsEnvSet("IPMI_IP",        "bd-mch04.cslab.esss.lu.se")
+epicsEnvSet("IPMI_PREFIX",    "$(RACKROW):$(ACQ_UNIT):")
+epicsEnvSet("IPMI_PORT",      "IPMI.$(SYSTEM1)")
+
+drvAsynIPPortConfigure("$(IPMI_PORT)","$(IPMI_IP):623 udp", 0, 0, 0)
+mchInit("$(IPMI_PORT)")
+dbLoadRecords("mtca3u-crate-ess.db", "dev=$(IPMI_PREFIX), link=$(IPMI_PORT), location=PBI lab")
+dbLoadRecords("sis8300ku_ess.db",    "_PREF=$(IPMI_PREFIX), _SESS=$(IPMI_PORT), _UNIT=1, _FRUID=9, _ID=8300KU")
